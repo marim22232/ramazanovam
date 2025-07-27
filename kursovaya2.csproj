@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80C1DDCD-A5C5-4768-8079-6792F9B07070}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>kursovaya2</RootNamespace>
+    <AssemblyName>kursovaya2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.135\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=8.0.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>packages\Npgsql.8.0.7\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Channels.8.0.0\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\PasswordHelper.cs" />
+    <Page Include="obj\DeliveryInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\BrandsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\CaptchaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\CartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\ContactWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\DeliveryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\EmployeeRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\OrderCreationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\OrdersWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\ProductAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\ProductDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\ProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\ProductsPageee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\ProductWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\ProfileWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\PromotionsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\registravcia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\UpdatePasswordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="okna\vhod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\Employee.cs" />
+    <Compile Include="classes\Format.cs" />
+    <Compile Include="classes\GenericRelayCommand.cs" />
+    <Compile Include="classes\Material.cs" />
+    <Compile Include="classes\Order.cs" />
+    <Compile Include="classes\OrderPosition.cs" />
+    <Compile Include="classes\Role.cs" />
+    <Compile Include="classes\shek.cs" />
+    <Compile Include="classes\Shop.cs" />
+    <Compile Include="classes\status.cs" />
+    <Compile Include="classes\CartItem.cs" />
+    <Compile Include="classes\categorya.cs" />
+    <Compile Include="classes\AuthManager.cs" />
+    <Compile Include="classes\EmailSender.cs" />
+    <Compile Include="classes\FrameClass.cs" />
+    <Compile Include="classes\Manufacturer.cs" />
+    <Compile Include="classes\Product.cs" />
+    <Compile Include="classes\RelayCommand.cs" />
+    <Compile Include="classes\SubCategory.cs" />
+    <Compile Include="classes\Unit.cs" />
+    <Compile Include="classes\Users.cs" />
+    <Compile Include="classes\Verification.cs" />
+    <Compile Include="Model\AdminViewModel.cs" />
+    <Compile Include="Model\BaseViewModel.cs" />
+    <Compile Include="Model\BrandsViewModel.cs" />
+    <Compile Include="Model\CartViewModel.cs" />
+    <Compile Include="Model\CategoryaFromDb.cs" />
+    <Compile Include="Model\Database.cs" />
+    <Compile Include="Model\DbConnection.cs" />
+    <Compile Include="Model\FormatRepository.cs" />
+    <Compile Include="Model\ManufacturerRepository.cs" />
+    <Compile Include="Model\ManufacturersViewModel.cs" />
+    <Compile Include="Model\MaterialRepository.cs" />
+    <Compile Include="Model\OrderCreationViewModel.cs" />
+    <Compile Include="Model\OrdersViewModel.cs" />
+    <Compile Include="Model\ProductFromDb.cs" />
+    <Compile Include="Model\ProductsViewModel.cs" />
+    <Compile Include="Model\ProfileViewModel.cs" />
+    <Compile Include="Model\StatusRepository.cs" />
+    <Compile Include="Model\UserFromDb.cs" />
+    <Compile Include="Model\ViewModel.cs" />
+    <Compile Include="obj\DeliveryInfoWindow.xaml.cs">
+      <DependentUpon>DeliveryInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\BrandsPage.xaml.cs">
+      <DependentUpon>BrandsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\CaptchaWindow.xaml.cs">
+      <DependentUpon>CaptchaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\CartWindow.xaml.cs">
+      <DependentUpon>CartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\ContactWindow.xaml.cs">
+      <DependentUpon>ContactWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\DeliveryWindow.xaml.cs">
+      <DependentUpon>DeliveryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\EmployeeRegistration.xaml.cs">
+      <DependentUpon>EmployeeRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\main.xaml.cs">
+      <DependentUpon>main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\OrderCreationWindow.xaml.cs">
+      <DependentUpon>OrderCreationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\OrdersWindow.xaml.cs">
+      <DependentUpon>OrdersWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\ProductAddPage.xaml.cs">
+      <DependentUpon>ProductAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\ProductDetailsWindow.xaml.cs">
+      <DependentUpon>ProductDetailsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\ProductsPage.xaml.cs">
+      <DependentUpon>ProductsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\ProductsPageee.xaml.cs">
+      <DependentUpon>ProductsPageee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\ProductWindow.xaml.cs">
+      <DependentUpon>ProductWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\ProfileWindow.xaml.cs">
+      <DependentUpon>ProfileWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\PromotionsWindow.xaml.cs">
+      <DependentUpon>PromotionsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\registravcia.xaml.cs">
+      <DependentUpon>registravcia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\UpdatePasswordWindow.xaml.cs">
+      <DependentUpon>UpdatePasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="okna\vhod.xaml.cs">
+      <DependentUpon>vhod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="okna\YourNamespace.ContactWindow" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\вход2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\вход.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\корзинка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\чел.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\Акрил Heavy Body.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\Этюдник Compact алюминиевый.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\Настольный мольберт металлический.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\Мольберт Lyra с полкой.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\Мольберт Studio деревянный.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\холст1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\холст2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\244427_kisti_brauberg_nabor_5_sht_sinteticheskaya_kruglaya_1_2_5_ploskaya_5_8_blister_200219_tsena_za_6_sht__1m.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\6562929121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\KA-00208080.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\KA-00374990.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\nabor-masl-krasokladoga-12-cv-kh-18ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\orig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\акварельная бумага а3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\Акварель 24 цвета.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\Блокнот для пастели.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\картон1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\Картон цветной А4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\скетчбук.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\холст3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagePath\6883873909.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
